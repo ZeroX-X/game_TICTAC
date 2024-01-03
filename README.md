@@ -1,4 +1,3 @@
-
 # TICTACTOEGAME
 A simple console-based Tic Tac Toe game with user authentication.
 ## Table of Contents
@@ -134,43 +133,140 @@ This project demonstrates the use of several classes and objects:
 ### Superclass
 #### `Player.java`
 ```java
+// super class Player.java
 public abstract class Player {
-    protected char symbol;
-    protected String playerName;
-    {
-'''
-#### `RegisteredPlayer.java`
-```java
-public class RegisteredPlayer extends Player {
-    private String password;
-    private String username;
-    public RegisteredPlayer(char symbol, String playerName, String username, String password) {
-        super(symbol, playerName);
-        this.username = username;
-        this.password = password;
-    }
-'''
-#### `GuestPlayer.java`
-```java
-public class GuestPlayer extends Player {
-    public GuestPlayer(char symbol, String playerName) {
-        super(symbol, playerName);
-    }
-'''
-### Overriding method
+    // ... (attributes and methods)
+}
 
-#### `RegisteredPlayer.java`
+// RegisteredPlayer.java
+public class RegisteredPlayer extends Player {
+    // ... (additional features and overrides)
+}
+
+// GuestPlayer.java
+public class GuestPlayer extends Player {
+    // ... (placeholder logic for guest player)
+}
+```
+
+
+## 3. Polymophism
+
+- Player:
+  - Implements the makeMove method using a functional interface for move validation.
+
 ```java
-@Override
-    public int makeMove(List<Integer> positions) {
-        return super.makeMove(positions);
+// Player.java
+public void makeMove(int move, List<Integer> positions) {
+    // ... (implementation)
+}
+
+// RegisteredPlayer.java
+public void makeMove(int move, List<Integer> positions) {
+    // ... (implementation specific to RegisteredPlayer)
+}
+
+```
+## 4. Encapsulation
+
+- User:
+  - Encapsulates user data (name, password) with getters.
+#### `Player.java`
+```java
+  public char getSymbol() {
+        return symbol;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
+    public int getLosses() {
+        return losses;
     }
 ```
+
+## 5. Abstraction
+
+- Player:
+  - Abstracts in here its a template for my superclass.
+#### `Player.java`
 ```java
-    @Override
-    public void savePlayerHistory(String result) {
-        super.savePlayerHistory(result);
+// Player.java
+public abstract class Player {
+    public abstract void makeMove(int move, List<Integer> positions);
+}
+```
+
+## 6. Exception Handling
+
+- Main:
+  - Handles exceptions during user input for move validation.
+#### `register.java`
+```java
+ try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath, true))) {
+            bufferedWriter.write(writingContent);
+            bufferedWriter.newLine();
+            System.out.println("Data has been appended to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+```
+
+## 7. File I/O
+
+- Login and Register:
+  - Writes and Reads user data from the "Userinfo.txt" file for authentication.
+
+#### `Register.java`
+- Register:
+  - Writes new user data to the "Userinfo.txt" file during registration.
+```java
+ try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath, true))) {
+            bufferedWriter.write(writingContent);
+            bufferedWriter.newLine();
+            System.out.println("Data has been appended to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+```
+## 8.  Functional Interface
+- Player:
+  - Uses a functional interface (MoveValidator) for move validation in the makeMove method.
+```java
+interface MoveValidator {
+    boolean validateMove(int move, List<Integer> positions);
+}
+```
+
+## 9.  Static Method
+
+- Login and Register:
+  - getUserList method is static, retrieving user data for authentication.
+```java
+// Login.java
+public class Login {
+    public static List<User> getUserList() {
+        // ... (implementation)
+    }
+}
+
+// Register.java
+public class Register {
+    public static List<User> getUserList() {
+        // ... (implementation)
+    }
+}
+```
+
+
 
 
 
