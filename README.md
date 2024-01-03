@@ -1,5 +1,23 @@
 # Tic Tac Toe Game
 
+A simple console-based Tic Tac Toe game with user authentication.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Classes and Objects](#classes-and-objects)
+  - [Inheritance](#inheritance)
+  - [Polymorphism](#polymorphism)
+  - [Encapsulation](#encapsulation)
+  - [Abstraction](#abstraction)
+  - [Exception Handling](#exception-handling)
+  - [File I/O](#file-io)
+  - [Anonymous Inner Class / Functional Interface / Lambda Expression](#anonymous-inner-class--functional-interface--lambda-expression)
+  - [Static Method](#static-method)
+- [Usage](#usage)
+- [User Records](#user-records)
+
 ## Overview
 
 This project implements a console-based Tic Tac Toe game with user authentication features. The primary components include an authentication system and the Tic Tac Toe game logic. Users can register, login, and play the game against each other. The project utilizes concepts such as inheritance, polymorphism, encapsulation, abstraction, exception handling, file I/O, anonymous inner classes, functional interfaces, lambda expressions, and static methods.
