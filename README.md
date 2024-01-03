@@ -2,7 +2,7 @@
 Welcome to the Tic-Tac-Toe Game! This is a classic two-player game where opponents take turns marking a cell in a 3x3 grid with their respective symbols (usually "X" and "O"). OurTic-Tac-Toe Game with User Registration and Score Tracker! This enhanced version allows players to register, log in, and track their scores across multiple games.
 
 
-# Table of Contents
+## Table of Contents
 
  - [Overview]()
  - [Features]()
@@ -18,10 +18,10 @@ Welcome to the Tic-Tac-Toe Game! This is a classic two-player game where opponen
    - [Anonymous Inner Class / Functional Interface / Lambda Expression]()
    - [Static Method]()
 
-## I. Overview
+#3# I. Overview
 This is a simple console-based Tic Tac Toe game implemented in Java. The game supports two players who can either register or log in to play. Player information is stored in a text file, and the game history is recorded after each match.
 
-## II. Features
+#3# II. Features
 - UserAuthentication :
    - Register as a new player with a unique username and password.
    - Log in with existing username and password to continue playing.
