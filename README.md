@@ -65,6 +65,24 @@ A simple console-based Tic Tac Toe game with user authentication.
 - **Player:**
   - Abstract class representing common attributes and methods for players.
   - Inherited by GuestPlayer and RegisteredPlayer.
+ 
+'''public abstract class Player {
+    protected char symbol;
+    protected String playerName;
+'''public class RegisteredPlayer extends Player {
+    private String password;
+    private String username;
+    public RegisteredPlayer(char symbol, String playerName, String username, String password) {
+        super(symbol, playerName);
+        this.username = username;
+        this.password = password;
+    }
+'''public class GuestPlayer extends Player {
+    public GuestPlayer(char symbol, String playerName) {
+        super(symbol, playerName);
+    }
+
+
 
 ### Polymorphism
 
