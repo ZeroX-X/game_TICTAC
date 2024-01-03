@@ -69,6 +69,8 @@ A simple console-based Tic Tac Toe game with user authentication.
 '''public abstract class Player {
     protected char symbol;
     protected String playerName;
+    {
+'''
 '''public class RegisteredPlayer extends Player {
     private String password;
     private String username;
@@ -77,11 +79,12 @@ A simple console-based Tic Tac Toe game with user authentication.
         this.username = username;
         this.password = password;
     }
+'''
 '''public class GuestPlayer extends Player {
     public GuestPlayer(char symbol, String playerName) {
         super(symbol, playerName);
     }
-
+'''
 
 
 ### Polymorphism
