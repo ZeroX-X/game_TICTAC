@@ -20,7 +20,7 @@ A simple console-based Tic Tac Toe game with user authentication.
 
 ## Overview
 
-    This project implements a console-based Tic Tac Toe game with user authentication features. The primary components include an authentication system and the Tic Tac Toe game logic. Users can register, login, and play the game against each other. The project utilizes concepts such as inheritance, polymorphism, encapsulation, abstraction, exception handling, file I/O, anonymous inner classes, functional interfaces, lambda expressions, and static methods.
+ This project implements a console-based Tic Tac Toe game with user authentication features. The primary components include an authentication system and the Tic Tac Toe game logic. Users can register, login, and play the game against each other. The project utilizes concepts such as inheritance, polymorphism, encapsulation, abstraction, exception handling, file I/O, anonymous inner classes, functional interfaces, lambda expressions, and static methods.
 
 ## Features
 
