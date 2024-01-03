@@ -60,8 +60,6 @@ This project implements a console-based Tic Tac Toe game with user authenticatio
 - **Register:**
   - Handles user registration, writing new user data to the "Userinfo.txt" file.
 
-- **Main:**
-
 ### Inheritance
 
 - **Player:**
