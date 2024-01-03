@@ -1,7 +1,5 @@
-# TICTACTOE GAMEPLAY
-Welcome to the Tic-Tac-Toe Game! This is a classic two-player game where opponents take turns marking a cell in a 3x3 grid with their respective symbols (usually "X" and "O"). OurTic-Tac-Toe Game with User Registration and Score Tracker! This enhanced version allows players to register, log in, and track their scores across multiple games.
-
-
+# Tic Tac Toe Game
+A simple console-based Tic Tac Toe game with user authentication.
 ## Table of Contents
 
  - [Overview]()
@@ -18,126 +16,60 @@ Welcome to the Tic-Tac-Toe Game! This is a classic two-player game where opponen
    - [Anonymous Inner Class / Functional Interface / Lambda Expression]()
    - [Static Method]()
 
-#3# I. Overview
-This is a simple console-based Tic Tac Toe game implemented in Java. The game supports two players who can either register or log in to play. Player information is stored in a text file, and the game history is recorded after each match.
+## Overview
+This project implements a console-based Tic Tac Toe game with user authentication features. The primary components include an authentication system and the Tic Tac Toe game logic. Users can register, login, and play the game against each other. The project utilizes concepts such as inheritance, polymorphism, encapsulation, abstraction, exception handling, file I/O, anonymous inner classes, functional interfaces, lambda expressions, and static methods.
 
-#3# II. Features
-- UserAuthentication :
-   - Register as a new player with a unique username and password.
-   - Log in with existing username and password to continue playing.
+### Features
+User Authentication:
 
-- GameBoard :
-   - A 3x3 grid is displayed after each move, showing the current state of the game
-- PlayerMoves: 
-   - Take turns making moves by entering a number corresponding to an empty position on the board.
-   - The game prevents players from making moves in already occupied positions.
-- GameLogic :
-   - Check for a winner after each move based on horizontal, vertical, or diagonal alignments.
-   - Detect a draw when the board is full and no winner is found.
-    - Ensuring the game is going smoothly between players
-- PlayerRecord :
-   - Track wins and losses for each player.
-   - Display player statistics after each game.
-- PlayerHistory :
-   - Save player history, including timestamps, game results, usernames, symbols, wins, and losses.
-- RegisteredPlayer:
-   - Support for registered players with usernames and passwords.
+Register as a new user with a unique username and password.
+Login with existing credentials to access the game.
+Gameplay:
 
+Two players take turns making moves on a 3x3 board.
+The game checks for a winner or a draw after each move.
+Player Statistics:
 
+Records user statistics, including wins and losses.
+Player history is saved in the "userRecord.txt" file with timestamps.
+Classes and Objects
+Inheritance
+Player:
+Abstract class representing common attributes and methods for players.
+Inherited by GuestPlayer and RegisteredPlayer.
+Polymorphism
+Player:
+Implements the makeMove method using a functional interface for move validation.
+Encapsulation
+User:
+Encapsulates user data (name, password) with getters.
+Abstraction
+Player:
+Abstracts common methods for making moves and saving player history.
+Exception Handling
+Main:
+Handles exceptions during user input for move validation.
+File I/O
+Login:
 
+Reads user data from the "Userinfo.txt" file for authentication.
+Register:
 
+Writes new user data to the "Userinfo.txt" file during registration.
+Player:
 
+Saves player history to the "userRecord.txt" file.
+Anonymous Inner Class / Functional Interface / Lambda Expression
+Player:
+Uses a functional interface (MoveValidator) for move validation in the makeMove method.
+Static Method
+Login and Register:
+getUserList method is static, retrieving user data for authentication.
+Usage
+Run the Main.java file located in the TicTacToeGame package.
+Follow the on-screen instructions to register or login as Player 1 and Player 2.
+Make moves by entering the desired placement (1-9) when prompted.
+User Records
+User records are stored in the "Userinfo.txt" file, containing username/password pairs.
 
-## 1. Classes and objectives
-
-This project demonstrates the use of several classes and objects:
-
-- **Login**: Manages user authentication, reads user information from a file, and verifies user registration.
-- **Register**: Handles user registration, writing new user information to a file.
-- **User**: Represents a user with a username and password. Implements the `equals` method and provides a `toString` method for object representation.
-- **Board**: Represents the Tic Tac Toe game board, manages player positions, and checks for a winner.
-- **Game**: Orchestrates the gameplay, takes player moves, and checks for a winner or a draw.
-- **Player**: An abstract class representing a player, with common attributes and methods for registered and unregistered players.
-- **RegisteredPlayer**: Extends the Player class, representing a player with registration details.
-
-## 2. Inheritance
-- Inheritance is utilized in the `Player` class, where `RegisteredPlayer` extends the `Player` class. The superclass includes a constructor, overloading and overriding methods, as well as other features used by its subclasses.
-
-# Getting Started
-
-## Project Structure
-
-The project is organized into several packages:
-
-### Authentication Package
-
-#### `Login.java`
-```java
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-```
-#### `Register.java`
-```java
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-```
-### TicTacToeGame Package
-#### `Board.java`
-```java
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-```
-#### `Game.java`
-```java
-import java.util.Arrays;
-import java.util.List;
-```
-#### `Player.java`
-```java
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Scanner;
-
-```
-### Main Package
-#### `Main.java`
-```java
-import java.util.Scanner;
-import TicTacToeGame.Authentication.Login;
-import TicTacToeGame.Authentication.Register;
-import TicTacToeGame.Authentication.User;
-import TicTacToeGame.*;
-
-
-```
-## 1. Classes and objectives
-
-This project demonstrates the use of several classes and objects:
-
-- **Login**: Manages user authentication, reads user information from a file, and verifies user registration.
-- **Register**: Handles user registration, writing new user information to a file.
-- **User**: Represents a user with a username and password. Implements the `equals` method and provides a `toString` method for object representation.
-- **Board**: Represents the Tic Tac Toe game board, manages player positions, and checks for a winner.
-- **Game**: Orchestrates the gameplay, takes player moves, and checks for a winner or a draw.
-- **Player**: An abstract class representing a player, with common attributes and methods for registered and unregistered players.
-- **RegisteredPlayer**: Extends the Player class, representing a player with registration details.
-
-## 2. Inheritance
-- Inheritance is utilized in the `Player` class, where `RegisteredPlayer` extends the `Player` class. The superclass includes a constructor, overloading and overriding methods, as well as other features used by its subclasses.
-
-### Overriding method
-```java
-
-```
-
-
-
-
+Player history records are stored in the "userRecord.txt" file, including timestamps, results, usernames, symbols, wins, and losses.
