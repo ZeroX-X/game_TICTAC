@@ -20,6 +20,30 @@ This project implements a console-based Tic Tac Toe game with user authenticatio
 
 ## Classes and Objects
 
+- **Player:**
+  - Represents a player in the game with attributes such as symbol, name, wins, and losses.
+  - Contains methods for making moves, saving player history, and incrementing wins/losses.
+
+- **RegisteredPlayer:**
+  - Extends the Player class and represents a registered player with additional features.
+  - Overrides methods for making moves and saving player history.
+
+- **GuestPlayer:**
+  - Extends the Player class and represents a guest player with basic features.
+  - Implements the `makeMove` method with placeholder logic.
+
+- **User:**
+  - Represents a user with attributes for name and password.
+  - Contains methods for getting name and password, along with a custom `toString` method.
+
+- **Login:**
+  - Manages user authentication, reading user data from the "Userinfo.txt" file.
+
+- **Register:**
+  - Handles user registration, writing new user data to the "Userinfo.txt" file.
+
+- **Main:**
+
 ### Inheritance
 
 - **Player:**
