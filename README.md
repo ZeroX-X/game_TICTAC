@@ -162,7 +162,7 @@ public void makeMove(int move, List<Integer> positions) {
 }
 
 // RegisteredPlayer.java
-public void makeMove(int move, List<Integer> positions) {
+public void makeMove(int move, List<Integer> positions, getscore) {
     // ... (implementation specific to RegisteredPlayer)
 }
 
